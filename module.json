@@ -30,6 +30,6 @@
     }
   ],
   "url": "https://github.com/lokihavok/tabbed-chat-routing",
-  "manifest": "https://github.com/lokihavok/tabbed-chat-routing/main/module.json",
-  "download": "https://github.com/lokihavok/tabbed-chat-routing/main/tabbed-chat-routing.zip"
+  "manifest": "https://github.com/lokihavok/tabbed-chat-routing/module.json",
+  "download": "https://github.com/lokihavok/tabbed-chat-routing/tabbed-chat-routing.zip"
 }
