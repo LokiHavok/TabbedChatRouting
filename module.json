@@ -1,5 +1,5 @@
 {
-  "id": "TabbedChatRouting",
+  "id": "tabbed-chat-routing",
   "title": "TabbedChatRouting",
   "description": "A chat module with four tabs (WORLD, OOC, GAME, MESSAGES) featuring chat routing and scene-specific instancing",
   "version": "1.0.0",
