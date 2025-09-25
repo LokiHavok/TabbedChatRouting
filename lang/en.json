@@ -1,0 +1,21 @@
+{
+  "TABBED_CHAT": {
+    "Title": "Tabbed Chat with Scene Instancing",
+    "Tabs": {
+      "World": "WORLD", 
+      "OOC": "OOC",
+      "Game": "GAME",
+      "Messages": "MESSAGES"
+    },
+    "Commands": {
+      "BreakCharacter": "Break Character (OOC with actor name)",
+      "Global": "Global message to all players"
+    },
+    "Tooltips": {
+      "WorldTab": "In-character chat (requires assigned token)",
+      "OOCTab": "Out-of-character chat", 
+      "GameTab": "Dice rolls and game mechanics",
+      "MessagesTab": "Private whispers and messages"
+    }
+  }
+}
