@@ -1,0 +1,181 @@
+/* Chat Tabs Container */
+.chat-tabs-container {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border-dark-tertiary);
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+
+/* Tab Header Bar */
+.chat-tabs {
+  display: flex;
+  background: var(--color-bg-secondary);
+  border-bottom: 1px solid var(--color-border-dark-tertiary);
+  border-radius: 3px 3px 0 0;
+  overflow: hidden;
+}
+
+/* Individual Tab */
+.tab {
+  flex: 1;
+  padding: 8px 12px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  background: var(--color-bg-secondary);
+  color: var(--color-text-secondary);
+  border-right: 1px solid var(--color-border-dark-tertiary);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.tab:last-child {
+  border-right: none;
+}
+
+.tab:hover {
+  background: var(--color-bg-hover);
+  color: var(--color-text-primary);
+}
+
+/* Active Tab */
+.tab.active {
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-border-highlight);
+}
+
+/* Tab Content Area */
+.tab-content {
+  padding: 0;
+  background: var(--color-bg);
+  border-radius: 0 0 3px 3px;
+  min-height: 200px;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+/* Messages Container */
+#tabbed-chat-messages {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  height: 400px;
+  overflow-y: auto;
+  background: var(--color-bg);
+}
+
+/* Message Styling */
+#tabbed-chat-messages .message {
+  border-bottom: 1px solid var(--color-border-light-tertiary);
+  padding: 8px;
+  margin: 0;
+}
+
+#tabbed-chat-messages .message:last-child {
+  border-bottom: none;
+}
+
+/* Tab-specific styling */
+.tab[data-tab="world"] {
+  color: #4a9eff;
+}
+
+.tab[data-tab="world"].active {
+  color: #4a9eff;
+  border-bottom: 2px solid #4a9eff;
+}
+
+.tab[data-tab="ooc"] {
+  color: #ff9f4a;
+}
+
+.tab[data-tab="ooc"].active {
+  color: #ff9f4a;
+  border-bottom: 2px solid #ff9f4a;
+}
+
+.tab[data-tab="game"] {
+  color: #4aff9f;
+}
+
+.tab[data-tab="game"].active {
+  color: #4aff9f;
+  border-bottom: 2px solid #4aff9f;
+}
+
+.tab[data-tab="messages"] {
+  color: #ff4a9f;
+}
+
+.tab[data-tab="messages"].active {
+  color: #ff4a9f;
+  border-bottom: 2px solid #ff4a9f;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 768px) {
+  .tab {
+    font-size: 9px;
+    padding: 6px 8px;
+  }
+}
+
+/* Custom scrollbar for messages */
+#tabbed-chat-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+#tabbed-chat-messages::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+#tabbed-chat-messages::-webkit-scrollbar-thumb {
+  background: var(--color-border-dark-tertiary);
+  border-radius: 3px;
+}
+
+#tabbed-chat-messages::-webkit-scrollbar-thumb:hover {
+  background: var(--color-border-dark-secondary);
+}
+
+/* Animation for tab switching */
+.tab-content {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Special message prefixes styling */
+.message .message-sender {
+  font-weight: bold;
+}
+
+.message-sender:has-text("[OOC]") {
+  color: #ff9f4a !important;
+}
+
+.message-sender:has-text("[Global]") {
+  color: #ffd700 !important;
+}
