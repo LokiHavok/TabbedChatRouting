@@ -1,0 +1,15 @@
+<div class="chat-tabs-container">
+  <div class="chat-tabs">
+    <div class="tab {{#if (eq currentTab 'world')}}active{{/if}}" data-tab="world">WORLD</div>
+    <div class="tab {{#if (eq currentTab 'ooc')}}active{{/if}}" data-tab="ooc">OOC</div>
+    <div class="tab {{#if (eq currentTab 'game')}}active{{/if}}" data-tab="game">GAME</div>
+    <div class="tab {{#if (eq currentTab 'messages')}}active{{/if}}" data-tab="messages">MESSAGES</div>
+  </div>
+  <div class="tab-content">
+    <ol class="chat-messages" id="tabbed-chat-messages">
+      {{#each messages}}
+        {{{this}}}
+      {{/each}}
+    </ol>
+  </div>
+</div>
